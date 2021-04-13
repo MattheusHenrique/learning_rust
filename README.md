@@ -167,6 +167,46 @@ TODO
 TODO
 <br>
 
-## linked-list in rust 
-TODO
+## Constants
+There are two types of constants in rust. They can be declared in any scope.
+- ```const```: Unchanging 
+- ```static```: Possibly changeable. With static lifetime.
+- Are declared in uppercase
+<br><br>
+
+# Variable Bindings:
+I had a hard time understanding the concept. For me variables and variable bindings were the same thing.
+But from what I understand, variable bindings are related to the declaration of the variable. (which by default is not variable: "mutable"). I didn't like the explanation of the documentation. I think it should be clearer, since the concept is quite different from other languages.
+
+ex: 
+```
+let number = 20; //Bindings
+```
+
+## Mutability:
+Not much to talk about. ```mut``` Mut in building to make mutable.
+
+ex:
+```
+let mut age = 10;
+
+println!("I am {} years old", age); //age = 10
+age+=1;
+println!("I am {} years old", age); //age = 11
+```
+
+## Scope and Shadowing:
+Let declarations are block-scoped: ```{}```.
+Allowing shading of variables.
 <br>
+
+## Declare first:
+It is possible to declare the variable without passing value. But this variable must receive value at compile time. Or the copiler will shoot you. Declare first, trust me I have suffered.
+
+## Freezing:
+I did not understand. //TODO
+
+
+
+
+
