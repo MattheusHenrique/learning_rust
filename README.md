@@ -1,6 +1,8 @@
 # Rust study (noob)
 ## My experience learning Rust:
 
+Some examples (almost all) were taken from https://doc.rust-lang.org/rust-by-example/types/cast.html. Others I forgot.
+
 ### Expectation:
 I don't know much about the language yet. I heard that language is strong for building OS. For now I thought it looked like C.
 <br>
@@ -206,7 +208,34 @@ It is possible to declare the variable without passing value. But this variable 
 ## Freezing:
 I did not understand. //TODO
 
+# Types
 
+## Casting:
+Rust cannot convert types implicitly, however it is possible to make explicit casting by the keyword ```as```
 
+In general, conversions follow the c pattern. However, cases in which the casting is undefined in c, have well-defined values.
+
+ex: 
+```
+//Implicit conversion
+let decimal: f32 = 5.0;
+let integer: u8 = decimal; 
+//Error in your face
+```
+
+```
+//Explicit conversion
+let integer = decimal as u8;
+let character = integer as char;
+//Everything worked out
+```
+
+## Literals:
+The types of natural numbers can be defined as a suffix or before ```=```
+```
+let number = 32i8;
+let age: u8 = 22;
+```
+If there are no limitations, the compiler will interpret integers as i32 and floats as f64
 
 
